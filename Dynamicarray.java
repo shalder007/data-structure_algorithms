@@ -1,55 +1,36 @@
- class Dynamicarray {
+ public class Dynamicarray {
 
-        private int arr[];
-        private int count;
-
-        public Dynamicarray(int length) {
-            arr = new int[length];
+    public static int[] array;
+    public static int size;
+    Dynamicarray(int size){
+        array = new int[size];
+    }
+    public static void printarray(){
+        for(int i = 0;i<array.length;i++){
+            System.out.print(array[i] +" ");
         }
-    
-        // Method 2
-        // Inside helper class
-        // To print array
-        public void printArray() {
-    
-            // Iterating over array using for loop
-            for (int i = 0; i < count; i++) {
-    
-                // Print the elements of an array
-                System.out.print(arr[i] + " ");
+        System.out.println();
+    }
+    public static void addelement(int element){
+        if(array.length == size){
+            int[] newarray = new int[2* size];
+            for(int i = 0;i<array.length;i++){
+                newarray[i] = array[i];
             }
+            array = newarray;
         }
- 
-        public void insert(int element) {
-    
-            if (arr.length == count) {
-   
-                int newArr[] = new int[2 * count];
-
-                for (int i = 0; i < count; i++) {
-                    newArr[i] = arr[i];
-                }
-
-                arr = newArr;
-            }
-    
-            arr[count++] = element;
-        }
-    
-    
-
-        public static void main(String[] args) {
-
-            Dynamicarray numbers = new Dynamicarray(3);
-    
-
-            numbers.insert(10);
-            numbers.insert(30);
-            numbers.insert(40);
-            numbers.insert(50);
-    
-            numbers.printArray();
-        }
+        array[size] = element;
+        size++;
+    }
+    public static void main(String[] args){
+        Dynamicarray array= new Dynamicarray(2);
+        array.addelement(22);
+        array.addelement(33);
+        array.addelement(44);
+        array.addelement(55);
+        array.addelement(66);
+        array.printarray();
+    }
     }
 
 
