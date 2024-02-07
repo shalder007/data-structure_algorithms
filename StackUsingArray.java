@@ -31,7 +31,7 @@ class Stack {
     }
 
     public void peek() {
-        if (top < 0) {
+        if (stackisempty()) {
             System.out.println("Stack Underflow");
         } else {
             int data = stackarray[top];
@@ -46,13 +46,12 @@ class Stack {
         System.out.println();
     }
 
-public void stackisempty(){
-    if(top<0){
-        System.out.println("The stack is empty.");
-    }else{
-        System.out.println("The stack has " + (top+1) +" items.");
-    }
+public boolean stackisempty(){
+    return top<0;
 
+}
+public void size(){
+    System.out.println("The size of the stack is  "+ (top+1));
 }
 }
 
@@ -62,9 +61,11 @@ class StackUsingArray {
         s.push(10);
         s.push(20);
         s.push(30);
+        s.push(33);
         s.peek();
         s.pop();
         s.print();
-        s.stackisempty();
+    System.out.println("Is the stack empty ? "+ s.stackisempty());
+        s.size();
     }
 }
