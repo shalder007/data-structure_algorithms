@@ -31,13 +31,20 @@
     public int getElement(int index) {
         return array[index];
     }
+    public void shrink() {
+        if (size < array.length / 2) {
+            int[] newarray = new int[array.length / 2];
+            for (int i = 0; i < size; i++) {
+                newarray[i] = array[i];
+            }
+            array = newarray;
+        }
+    }
     public static void main(String[] args){
         Dynamicarray array= new Dynamicarray(2);
         array.addelement(22);
         array.addelement(33);
         array.addelement(44);
-        array.addelement(55);
-        array.addelement(66);
         array.printarray();
     }
     }
