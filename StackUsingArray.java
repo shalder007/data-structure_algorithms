@@ -1,5 +1,5 @@
 class Stack {
-    static final int MAX = 5;
+    int MAX = 5;
     int top = -1;
     int stackarray[] = new int[MAX];
 
@@ -65,7 +65,7 @@ class StackUsingArray {
         s.peek();
         s.pop();
         s.print();
-    System.out.println("Is the stack empty ? "+ s.stackisempty());
+       System.out.println("Is the stack empty ? "+ s.stackisempty());
         s.size();
     }
 }

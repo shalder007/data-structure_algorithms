@@ -1,6 +1,6 @@
  public class Dynamicarray {
-    public static int[] array;
-    public static int size;
+    public  int[] array;
+    public  int size;
     Dynamicarray(int size){
         array = new int[size];
     }
@@ -20,6 +20,16 @@
         }
         array[size] = element;
         size++;
+    }
+    public void removeElement(int index) {
+        for (int i = index; i < size - 1; i++) {
+            array[i] = array[i + 1];
+        }
+        array[size - 1] = 0;  
+        size--;
+    }
+    public int getElement(int index) {
+        return array[index];
     }
     public static void main(String[] args){
         Dynamicarray array= new Dynamicarray(2);
