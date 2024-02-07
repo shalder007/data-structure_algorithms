@@ -1,17 +1,16 @@
  public class Dynamicarray {
-
     public static int[] array;
     public static int size;
     Dynamicarray(int size){
         array = new int[size];
     }
-    public static void printarray(){
+    public void printarray(){
         for(int i = 0;i<array.length;i++){
             System.out.print(array[i] +" ");
         }
         System.out.println();
     }
-    public static void addelement(int element){
+    public void addelement(int element){
         if(array.length == size){
             int[] newarray = new int[2* size];
             for(int i = 0;i<array.length;i++){

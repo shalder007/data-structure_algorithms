@@ -38,6 +38,7 @@ public class LinkedListSingly{
     Node current = head;
     for(int i = 0;i<index-1 && current!= null;i++){
        current = current.next;
+
     }
     if(current == null){
         System.out.println("Index out of bounds.");

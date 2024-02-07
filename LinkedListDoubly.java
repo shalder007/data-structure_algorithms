@@ -124,7 +124,7 @@ public class LinkedListDoubly {
          System.out.println(" ");
     }
     public static void main(String[] args){
-        LinkeListDoubly mylist2 = new LinkeListDoubly();
+        LinkedListDoubly mylist2 = new LinkedListDoubly();
         mylist2.insertAtBeginning(10);
         mylist2.insertAtLast(11);
         mylist2.insertAtLast(20);
