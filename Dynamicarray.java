@@ -41,11 +41,17 @@
         }
     }
     public static void main(String[] args){
-        Dynamicarray array= new Dynamicarray(2);
+        Dynamicarray array= new Dynamicarray(3);
         array.addelement(22);
         array.addelement(33);
-        array.addelement(44);
+        array.addelement(44); 
+        array.addelement(55);
+        array.removeElement(1);
+        array.removeElement(2);
+        array.shrink();
         array.printarray();
+
+
     }
     }
 
