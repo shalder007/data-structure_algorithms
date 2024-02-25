@@ -31,6 +31,9 @@
     public int getElement(int index) {
         return array[index];
     }
+    public int getSize() {
+        return size;
+    }
     public void shrink() {
         if (size < array.length / 2) {
             int[] newarray = new int[array.length / 2];
@@ -41,7 +44,7 @@
         }
     }
     public static void main(String[] args){
-        Dynamicarray array= new Dynamicarray(3);
+        Dynamicarray array= new Dynamicarray(8);
         array.addelement(22);
         array.addelement(33);
         array.addelement(44); 
@@ -50,8 +53,7 @@
         array.removeElement(2);
         array.shrink();
         array.printarray();
-
-
+        System.out.println("Size: " + array.getSize());
     }
     }
 
