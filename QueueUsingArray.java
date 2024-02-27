@@ -50,14 +50,14 @@ public boolean queueisFull(){
 }public class QueueUsingArray {
     public static void main(String[] args){
         Queue myqueue1 = new Queue();
-        // myqueue1.enqueue(52);
-        // myqueue1.enqueue(55);
-        // myqueue1.enqueue(69);
-        // myqueue1.enqueue(74);
+        myqueue1.enqueue(52);
+        myqueue1.enqueue(55);
+        myqueue1.enqueue(69);
+        myqueue1.enqueue(74);
         myqueue1.dequeue();
         myqueue1.dequeue();
-        // myqueue1.enqueue(80);
-        // myqueue1.enqueue(82);
+        myqueue1.enqueue(80);
+        myqueue1.enqueue(82);
         myqueue1.show();
         System.out.println("Size is :" + myqueue1.getsize());
         System.out.println("Is the queue Empty ?"+ myqueue1.queueisEmpty());

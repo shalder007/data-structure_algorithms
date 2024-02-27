@@ -44,12 +44,15 @@ public class LinkedListDoubly {
                 current = current.next;
             }
             if(current == null){
+                System.out.println("Index out of bounds, inserting at the end.");
                 insertAtLast(data);
             }else{
                 newnode.next = current;
-                newnode.prev = current.prev;
-                current.prev.next = newnode;
                 current.prev = newnode;
+                current.prev.next = newnode;
+                newnode.prev = current.prev;
+              
+            
             }
 
         }
